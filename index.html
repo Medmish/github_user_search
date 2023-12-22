@@ -15,22 +15,68 @@
      <div class="container">
         <div class="title">
             <p class="topic">devfinder</p>
-            <button class="theme">
-               <span>LIGHT</span>
-               <img class="img-sun"src="assets/sun(2).png" alt="">
+            <button class="theme" >
+               <span class="m">LIGHT ☀︎</span>
+               <!-- <i id="light"class="fa-regular fa-sun light"></i> -->
+               <!-- <i id="dark" class="fa-solid fa-moon dark"></i> -->
             </button>
         </div>
-        <form class="search">
+        <form class="search" onsubmit="sum(event)">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text"class="search-box" placeholder="Search GitHub username">
+          <input type="text" id="github-username" class="search-box" placeholder="Search GitHub username">
+          <p class="hidden"id="search-error">No results</p>
+          <p class="hidden"id="empty-field">Empty Field</p>
           <button class="btn" type="submit">Search</button>
         </form>
 
         <div class="content">
-           
+          <img src="./assets/image-user-placeholder.png" class="user-img" id="user-img" alt="">
+          <div class="main">
+                <!-- <img src="./assets/image-user-placeholder.png" class="user-img" id="user-img" alt="" /> -->
+                <div class="profile-info">
+                      <h1 class="user-name" id="user-name">Name</h1class=>
+                      <h4 class="user-joined" id="user-joined">Joined ...</h4>
+                      <a href="" class="user-username" id="user-username">@Username</a>
+                 </div>
+                <p class="user-bio" id="user-bio">CccdddD</p>
+                <div class="user-stats" >
+                  <div>
+                    <h4 class="user-stat-title">Repos</h4>
+                    <h2 class="user-stat-value" id="repos">...</h2>
+                  </div>
+                  <div>
+                    <h4 class="user-stat-title">Followers</h4>
+                    <h2 class="user-stat-value" id="followers">...</h2>
+                  </div>
+                  <div>
+                    <h4 class="user-stat-title">Following</h4>
+                    <h2 class="user-stat-value" id="following">...</h2>
+                  </div>
+                </div>
+                <div class="contact">
+                     <div class="user-link-container" id="user-location">
+                      <i class="fa-solid fa-location-dot"></i>
+                      
+                      <!-- <a href="https://www.flaticon.com/free-icons/location" title="location icons">Location icons created by Vitaly Gorbachev - Flaticon</a> -->
+                      <span class="body user-link" id="location">Location...</span>
+                     </div>
+                     <div class="user-link-container" id="user-twitter">
+                      <i class="fa-brands fa-square-twitter"></i>
+                      <a href="" class="body user-link" id="twitter" rel="noreferrer">Twitter...</a>
+                     </div>
+                     <div  class="user-link-container" id="user-website">
+                      <i class="fa-solid fa-link"></i>
+                      <a href="" class="body user-link" id="website" rel="noreferrer">Website...</a>
+                     </div>
+                     <div class="user-link-container" id="user-organization">
+                      <i class="fa-solid fa-building-columns"></i>
+                      <a href="" class="body user-link" id="organization" rel="noreferrer">Organization...</a>
+                     </div>
+                </div>
+         </div>
         </div>
-     </div>
-     
+      </div>
+     <script src="index.js"></script>
   </body>
 
 
